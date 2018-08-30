@@ -1,0 +1,225 @@
+/*
+Theme Name:     Pentamint Custom Divi Theme
+Theme URI:      https://www.pentamint.com
+Description:    Pentamint customizations for Divi Theme
+Author:         Pentamint Co., Ltd.
+Author URI:     https://www.pentamint.com
+Template:       Pentamint Divi
+Version:        1.0.0
+*/
+
+/* =========================================================
+                      PENTAMINT GLOBAL
+   ========================================================= */
+body { /* default font design */
+  -webkit-tap-highlight-color:transparent; /* 클릭 하이라이트 제거 */
+  -ms-overflow-style: none; /* 크로스브라우징 설정 */
+  word-break: keep-all; /* Wordwrap 설정 */
+  font-family: 'Roboto', 'Nanum Gothic', sans-serif;
+  font-size: 100%;
+  font-weight: normal;
+  color: #000; /* DIVI RESET #666 */
+}
+a { /* default link & animation */
+  color: #000; /* DIVI RESET #2ea3f2 */
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+a, a:hover, a:active, a:visited, a:focus { /* remove text decoration after click */
+    text-decoration: none !important;
+}
+h1, h2, h3, h4, h5, h6, body, input, textarea, select { /* title font design */
+  font-family: 'Montserrat', 'Nanum Gothic', sans-serif;
+  color: #000; /* DIVI RESET #333 */
+}
+/* =========================================================
+                    PENTAMINT GLOBAL END
+   ========================================================= */
+
+/* =========================================================
+                    PENTAMINT DIVI RESET
+   ========================================================= */
+/* Header jump fix */
+#page-container {
+ /* padding-top: 145px !important; */
+}
+#main-header {
+ /* top: 67px !important; */
+}
+/* Header jump fix end */
+/* 기본 Box shadow 제거 */
+.et_pb_slider_0>.box-shadow-overlay, .et_pb_text_0, .et_pb_text_1 {
+  box-shadow: none;
+}
+/* 슬라이더 화살표 크기 */
+.et-pb-arrow-prev:before, .et-pb-arrow-next:before{
+  font-size: 1.375em; /* 4em */
+}
+/* ----- Responsive Styles Large Desktop And Above ----- */
+@media all and (min-width: 1405px) {
+}
+/* ----- Responsive Styles Standard Desktop Only ----- */
+@media all and (min-width: 1100px) and (max-width: 1405px) {
+}
+/* ----- Responsive Styles Tablet And Below ----- */
+@media all and (max-width: 980px) {
+   /* 섹션 자간 보정 */
+  .et_pb_section {
+    padding: 2em 0;
+  }
+}
+/* ----- Responsive Styles Tablet Only ----- */
+@media all and (min-width: 768px) and (max-width: 980px) {
+}
+/* ----- Responsive Styles Smartphone Only ----- */
+@media all and (max-width: 767px) {
+}
+/* ----- Responsive Styles Smartphone Portrait ----- */
+@media all and (max-width: 479px) {
+}
+/* =========================================================
+                  PENTAMINT DIVI RESET END
+   ========================================================= */
+
+/* =========================================================
+                    VILLA OPPI CUSTOM CODE
+   ========================================================= */
+/* ********** DIVI HEADER ********** */
+/* Header layout design */
+#page-container {
+  position: relative;
+}
+#top-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#top-header .container {
+  width: 100%;
+  right: calc((100vw - 1200px) / 2);
+}
+@media all and (max-width: 1500px) {
+  #top-header .container {
+    right: calc((100vw - 80vw) / 2);
+  }
+}
+.et_header_style_centered #main-header .logo_container { /* add top spacing above top header */
+  padding-top: .5em;
+  box-sizing: content-box;
+}
+.et_header_style_centered #main-header .container {
+  text-align: unset; /* unset main nav center */
+}
+.et_header_style_centered #main-header .logo_container {
+  text-align: center; /* center logo */
+}
+#top-menu-nav .wpml-ls-item { /* move wpml switch right */
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+/* Header layout design end */
+/* Logo design */
+.et_pb_svg_logo.et_header_style_centered #logo {
+  height: 90%;
+}
+.et_header_style_centered #logo {
+  max-height: 90%;
+}
+@media all and (max-width: 980px) {
+  .et_pb_svg_logo.et_header_style_centered #logo {
+    height: 100%;
+  }
+  .et_header_style_centered #logo {
+    max-height: 5em;
+  }
+}
+/* Logo design end */
+#et_search_icon:hover, #top-menu li.current-menu-ancestor>a, #top-menu li.current-menu-item>a, .bottom-nav li.current-menu-item>a, .comment-reply-link, .entry-summary p.price ins, .et-social-icon a:hover, .et_password_protected_form .et_submit_button, .footer-widget h4, .form-submit .et_pb_button, .mobile_menu_bar:after, .mobile_menu_bar:before, .nav-single a, .posted_in a, .wp-pagenavi a:hover, .wp-pagenavi span.current {
+  color: #000; /* DIVI RESET #2ea3f2 */
+}
+#top-header {
+  font-size: 100%; /* DIVI RESET 12px */
+}
+#top-menu a { /* main menu design */
+  font-family: 'Montserrat', 'Nanum Gothic', sans-serif;
+  font-weight: 700;
+  font-size: .857em;
+  text-transform: uppercase;
+  color: #000;
+}
+.et_header_style_centered header#main-header #top-menu > li > a {
+  padding-bottom: .75em; /* DIVI RESET 0 */
+  padding-top: .75em;
+}
+/* Top menu left design */
+#et-secondary-nav li ul, #top-header {
+  background-color: transparent; /* DIVI RESET #2ea3f2 */
+}
+#et-secondary-menu a {
+  font-size: 0.5625em; /* top nav font size */
+}
+#top-header {
+  color: #000; /* top menu left font color */
+}
+#et-info {
+  font-size: 0.5625em; /* top menu left font size */
+  padding: .5em; /* container padding fix */
+}
+#et-info-phone:before {
+  display: none; /* remove icon */
+}
+#et-info, #et-secondary-menu>ul>li a {
+  padding-bottom: 0; /* DIVI RESET .75em */
+}
+/* Top menu right design */
+#top-header a {
+  color: #000; /* DIVI RESET #2ea3f2 */
+}
+#top-header .container {
+  padding-top: 0; /* /* DIVI RESET .75em */
+  padding: .5em; /* top nav container padding */
+}
+.et-search-form, .et_mobile_menu, .footer-widget li:before, .nav li ul, blockquote {
+  border-color: #666; /* DIVI RESET #2ea3f2 */
+}
+/* ********** DIVI HEADER END ********** */
+
+/* ********** DIVI PAGE ELEMENTS ********** */
+/* herobanner */
+#hero-banner {
+  background-color: #000;
+}
+#hero-banner .et_parallax_bg {
+  opacity: .5;
+}
+/* divider row */
+.divider-text {
+  position: relative;
+  width: 20em;
+  background-color: #fff;
+  z-index: 999999;
+  margin: 0 auto;
+}
+.divider-line {
+  margin-top: -54px;
+}
+/* best product row */
+.best-row .amazingcarousel-item .amazingcarousel-item-container:nth-child(1) {
+  margin-bottom: 150px !important;
+}
+.best-row .divider-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+}
+/* ********** DIVI PAGE ELEMENTS END ********** */
+
+/* ********** WOOCOMMERCE RESET ********** */
+/* ********** WOOCOMMERCE RESET END ********** */
+/* =========================================================
+                  SWABISTI CUSTOM CODE END
+   ========================================================= */
