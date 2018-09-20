@@ -29,7 +29,7 @@ a { /* default link & animation */
 a, a:hover, a:active, a:visited, a:focus { /* remove text decoration after click */
     text-decoration: none !important;
 }
-h1, h2, h3, h4, h5, h6, body, input, textarea, select, #top-menu a, #top-menu-nav a { /* Main Font Design */
+h1, h2, h3, h4, h5, h6, input, textarea, select, #top-menu a, #top-menu-nav a { /* Main Font Design */
   font-family: 'Montserrat', 'Nanum Gothic', sans-serif;
   color: #000; /* DIVI RESET #333 */
 }
@@ -83,6 +83,33 @@ h1, h2, h3, h4, h5, h6, body, input, textarea, select, #top-menu a, #top-menu-na
    ========================================================= */
 
 /* =========================================================
+                WOOCOMMERCE RESET VERT IMG TYPE
+   ========================================================= */
+.woocommerce div.product div.images img { /* single product page main image */
+  padding: 2em;
+  max-height: 500px;
+  object-fit: contain;
+}
+.woocommerce ul.products li.product a img { /* shop page & related product image */
+  padding: 1em;
+  max-height: 250px;
+  object-fit: contain;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { /* IE only */
+   .woocommerce div.product div.images img { /* single product page main image */
+     max-width: calc(137px + 64px);
+     margin: 0 auto;
+   }
+   .woocommerce ul.products li.product a img { /* shop page & related product image */
+     max-width: calc(68.5px + 32px);
+     margin: 0 auto !important;
+   }
+}
+/* =========================================================
+              WOOCOMMERCE RESET VERT IMG TYPE END
+   ========================================================= */
+
+/* =========================================================
                     VILLA OPPI CUSTOM CODE
    ========================================================= */
 /* ********** DIVI HEADER ********** */
@@ -95,24 +122,27 @@ h1, h2, h3, h4, h5, h6, body, input, textarea, select, #top-menu a, #top-menu-na
   color: #fff !important;
 }
 #main-header .logo_container a {
-  background-color: #990000;
-  width: 200px;
+  width: 150px;
   position: absolute;
-  padding: 10px 30px;
-  margin-top: -35px;
+  padding: 0;
+  margin-top: -30px;
   z-index: 999999;
   text-align: center;
 }
-#main-header.et-fixed-header .logo_container a {
-  width: 160px;
+#main-header .logo_container a img {
+  border-radius: 5px;
+}
+#main-header.et-fixed-header .logo_container a { /* fixed header resizing */
+  width: 120px;
+  padding: 0;
 }
 #main-header #et_search_icon:hover {
   color: #990000;
 }
-#top-header {
+#top-header { /* top header bar */
   background-color: #000 !important;
   height: 35px; /* remove transparent spacing */
-  z-index:999
+  z-index:1000;
 }
 #top-header a {
   color: #fff !important;
@@ -173,13 +203,21 @@ h1, h2, h3, h4, h5, h6, body, input, textarea, select, #top-menu a, #top-menu-na
 /* ********** DIVI HEADER END ********** */
 
 /* ********** DIVI PAGE ELEMENTS ********** */
-/* herobanner */
-#hero-banner {
-  background-color: #000;
+/* standard content row herobanner */
+#hero-banner .et_pb_row_0 { /* banner title positioning */
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    right: 0;
 }
-#hero-banner .et_parallax_bg {
-  opacity: .5;
+#hero-banner .et_pb_row_0 p:nth-child(1) { /* banner title 1st */
+    font-size: 2em;
 }
+#hero-banner .et_pb_row_0 p:nth-child(2) { /* banner title 2nd */
+    font-size: 1.3em;
+}
+/* standard content row herobanner end */
+
 /* divider row */
 .divider-text {
   position: relative;
@@ -207,5 +245,5 @@ h1, h2, h3, h4, h5, h6, body, input, textarea, select, #top-menu a, #top-menu-na
 /* ********** WOOCOMMERCE RESET ********** */
 /* ********** WOOCOMMERCE RESET END ********** */
 /* =========================================================
-                  SWABISTI CUSTOM CODE END
+                  VILLA OPPI CUSTOM CODE END
    ========================================================= */
