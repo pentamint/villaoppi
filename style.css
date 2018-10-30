@@ -59,6 +59,9 @@ h1, h2, h3, h4, h5, h6, input, textarea, select { /* Main Font Design */
  top: 35px !important;
 }
 /* /Header jump fix */
+#main-header .container {
+  width: 90%;
+}
 /* Logo area */
 #main-header .logo_container a {
   width: 150px;
@@ -66,7 +69,6 @@ h1, h2, h3, h4, h5, h6, input, textarea, select { /* Main Font Design */
   padding: 0;
   margin-top: -30px;
   z-index: 999999;
-  text-align: center;
 }
 #main-header.et-fixed-header .logo_container a { /* fixed header resizing */
   width: 120px;
@@ -121,6 +123,9 @@ h1, h2, h3, h4, h5, h6, input, textarea, select { /* Main Font Design */
     color: #fff !important;
   }
    /* 섹션 자간 보정 */
+   #hero-banner .et_pb_row_0 {
+     position: relative;
+   }
   .et_pb_section {
     padding: 2em 0;
   }
@@ -130,9 +135,15 @@ h1, h2, h3, h4, h5, h6, input, textarea, select { /* Main Font Design */
 }
 /* ----- Responsive Styles Smartphone Only ----- */
 @media all and (max-width: 767px) {
+  #hero-banner {
+    padding-top: 3em;
+  }
 }
 /* ----- Responsive Styles Smartphone Portrait ----- */
 @media all and (max-width: 479px) {
+  #hero-banner {
+    padding-top: 1em;
+  }
 }
 /* =========================================================
    2. /LAYOUT
@@ -358,6 +369,24 @@ body #page-container .et_pb_button {
 }
 #hero-banner .et_pb_row_0 p:nth-child(2) { /* banner title 2nd */
     font-size: 1.3em;
+}
+/* ----- Responsive Styles Smartphone Only ----- */
+@media all and (max-width: 600px) {
+  #hero-banner .et_pb_row_0 p:nth-child(1) { /* banner title 1st */
+      font-size: 1.5em;
+  }
+  #hero-banner .et_pb_row_0 p:nth-child(2) { /* banner title 2nd */
+      font-size: 1.1em;
+  }
+}
+/* ----- Responsive Styles Smartphone Portrait ----- */
+@media all and (max-width: 479px) {
+  #hero-banner .et_pb_row_0 p:nth-child(1) { /* banner title 1st */
+      font-size: 1.2em;
+  }
+  #hero-banner .et_pb_row_0 p:nth-child(2) { /* banner title 2nd */
+      font-size: .875em;
+  }
 }
 /* /Standard content row herobanner */
 /* Post cards */
